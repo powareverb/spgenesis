@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+
+  <!-- Field element -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        SPGEN Field element
+      </Title>
+      <Shortcut>SPGENField</Shortcut>
+    </Header>
+
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>Id</ID>
+          <ToolTip>This is the ID for the field. Replace it with a GUID.</ToolTip>
+          <Default>GUID</Default>
+        </Literal>
+        <Literal>
+          <ID>TypeName</ID>
+          <ToolTip>This is the type name for the field. The internal and static name for the field will be the same unless not specified in the attribute.</ToolTip>
+          <Default>MyField1</Default>
+        </Literal>
+        <Literal>
+          <ID>SPFieldType</ID>
+          <ToolTip>This is field type for this field. Use one of the built-in types by using the SPFieldType enumeration. To specify a custom field type, use the CustomType parameter instead.</ToolTip>
+          <Default>SPFieldType.Text</Default>
+        </Literal>
+        <Literal>
+          <ID>DisplayName</ID>
+          <ToolTip>This is the display name for the field. Replace it with a string.</ToolTip>
+          <Default>MyField1</Default>
+        </Literal>
+        <Literal>
+          <ID>Group</ID>
+          <ToolTip>This is the group name for the field. Replace it with a string.</ToolTip>
+          <Default>Custom</Default>
+        </Literal>
+        <Literal>
+          <ID>SPField</ID>
+          <ToolTip>This is the corresponding SPField-type for this field. Use 'SPField' if you are uncertain of what type it corresponds.</ToolTip>
+          <Default>SPField</Default>
+        </Literal>
+        <Literal>
+          <ID>ValueType</ID>
+          <ToolTip>This is the corresponding value type for this fields value. Use 'object' if you are uncertain of what value type it corresponds.</ToolTip>
+          <Default>string</Default>
+        </Literal>
+      </Declarations>
+
+      <Code Language="CSharp">
+        <![CDATA[
+    [SPGENField(ID = "$Id$", DisplayName = "$DisplayName$", Type = $SPFieldType$, Group = "$Group$")]
+    public class $TypeName$ : SPGENField<$TypeName$, $SPField$, $ValueType$>
+    {
+    }
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- Content type element -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        SPGEN Content type element
+      </Title>
+      <Shortcut>SPGENContentType</Shortcut>
+    </Header>
+
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>Id</ID>
+          <ToolTip>This is the ID for the content type. Replace it with a valid content type ID string.</ToolTip>
+          <Default>0x0100</Default>
+        </Literal>
+        <Literal>
+          <ID>TypeName</ID>
+          <ToolTip>This is the type name for the content type.</ToolTip>
+          <Default>MyContentType1</Default>
+        </Literal>
+        <Literal>
+          <ID>Name</ID>
+          <ToolTip>This is the display name for the content type. Replace it with a string.</ToolTip>
+          <Default>MyContentType1</Default>
+        </Literal>
+        <Literal>
+          <ID>Group</ID>
+          <ToolTip>This is the group name for the content type. Replace it with a string.</ToolTip>
+          <Default>Custom</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[
+    [SPGENContentType(ID = "$Id$", Name = "$Name$", Group = "$Group$")]
+    public class $TypeName$ : SPGENContentType<$TypeName$>
+    {
+    }
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!-- List instance element -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        SPGEN List instance element
+      </Title>
+      <Shortcut>SPGENListInstance</Shortcut>
+    </Header>
+
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>WebRelURL</ID>
+          <ToolTip>This is the web relative URL for the list instance. Replace it with a string.</ToolTip>
+          <Default>Lists/MyList1</Default>
+        </Literal>
+        <Literal>
+          <ID>TypeName</ID>
+          <ToolTip>This is the type name for the list instance.</ToolTip>
+          <Default>MyList1</Default>
+        </Literal>
+        <Literal>
+          <ID>Title</ID>
+          <ToolTip>This is the title for the list instance. Replace it with a string.</ToolTip>
+          <Default>MyList1</Default>
+        </Literal>
+        <Literal>
+          <ID>TemplateType</ID>
+          <ToolTip>This is the template type. Replace it with an integer or use one of the built-in SPListTemplateType enumration values and cast it to an integer. You must also specify the TemplateFeatureId parameter if the template is not found in the web site you are adding this list isntance to.</ToolTip>
+          <Default>(int)SPListTemplateType.GenericList</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[
+    [SPGENListInstance(WebRelURL = "$WebRelURL$", Title = "$Title$", TemplateType = $TemplateType$)]
+    public class $TypeName$ : SPGENListInstance<$TypeName$>
+    {
+    }
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+
+  <!-- View element -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        SPGEN List view element
+      </Title>
+      <Shortcut>SPGENView</Shortcut>
+    </Header>
+
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>UrlFileName</ID>
+          <ToolTip>This is the file name for the view. Replace it with a string.</ToolTip>
+          <Default>MyView1.aspx</Default>
+        </Literal>
+        <Literal>
+          <ID>TypeName</ID>
+          <ToolTip>This is the type name for the list view.</ToolTip>
+          <Default>MyView1</Default>
+        </Literal>
+        <Literal>
+          <ID>Title</ID>
+          <ToolTip>This is the display name for the view. Replace it with a string.</ToolTip>
+          <Default>MyView1</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[
+    [SPGENView(UrlFileName = "$UrlFileName$", Title = "$Title$")]
+    public class $TypeName$ : SPGENView<$TypeName$>
+    {
+    }
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  
+  <!-- Feature -->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        SPGEN Feature
+      </Title>
+      <Shortcut>SPGENFeature</Shortcut>
+    </Header>
+
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>Id</ID>
+          <ToolTip>This is feature ID. Replace it with a GUID</ToolTip>
+          <Default>GUID</Default>
+        </Literal>
+        <Literal>
+          <ID>TypeName</ID>
+          <ToolTip>This is the type name for the feature.</ToolTip>
+          <Default>MyFeature1</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[
+    [SPGENFeature(ID = "$Id$")]
+    public class $TypeName$ : SPGENFeature<$TypeName$>
+    {
+    }
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
+
+

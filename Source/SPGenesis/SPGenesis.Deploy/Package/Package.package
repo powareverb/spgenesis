@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="0388105c-3ac2-4cac-b6c8-d3192e679504" solutionId="0388105c-3ac2-4cac-b6c8-d3192e679504" resetWebServer="false" name="SPGenesis" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="SPGenesis.Core.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\SPGenesis.Core\SPGenesis.Core.csproj" />
+    <projectOutputAssembly location="SPGenesis.Entities.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\SPGenesis.Entities\SPGenesis.Entities.csproj" />
+  </assemblies>
+</package>

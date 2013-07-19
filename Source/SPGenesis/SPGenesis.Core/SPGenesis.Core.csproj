@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{50A04750-86F7-4172-A7AB-58E669FA6121}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SPGenesis.Core</RootNamespace>
+    <AssemblyName>SPGenesis.Core</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SPGenesis.Core.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>keyfile.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.BusinessData, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.BusinessData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Linq, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.SharePoint.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\SPGENContentTypeAttribute.cs" />
+    <Compile Include="Attributes\SPGENElementAttributesBase.cs" />
+    <Compile Include="Attributes\SPGENEventHandlerRegistrationAttribute.cs" />
+    <Compile Include="Attributes\SPGENEventHandlerSynchronizationAttribute.cs" />
+    <Compile Include="Attributes\SPGENEventSequenceNumber.cs" />
+    <Compile Include="Attributes\SPGENFeatureAssociationAttribute.cs" />
+    <Compile Include="Attributes\SPGENFeatureAttribute.cs" />
+    <Compile Include="Attributes\SPGENFieldAttribute.cs" />
+    <Compile Include="Attributes\SPGENListInstanceAttribute.cs" />
+    <Compile Include="Attributes\SPGENViewAttribute.cs" />
+    <Compile Include="Collections\SPGENElementCollectionBase.cs" />
+    <Compile Include="Collections\SPGENEventReceiverCollection.cs" />
+    <Compile Include="Collections\SPGENFieldLinkCollection.cs" />
+    <Compile Include="Collections\SPGENListContentTypeCollection.cs" />
+    <Compile Include="Collections\SPGENListFieldCollection.cs" />
+    <Compile Include="Collections\SPGENListViewCollection.cs" />
+    <Compile Include="Collections\SPGENViewFieldCollection.cs" />
+    <Compile Include="ElementProperties\ISPGENPropertyConverter.cs" />
+    <Compile Include="ElementProperties\SPGENContentTypeProperties.cs" />
+    <Compile Include="ElementProperties\SPGENElementDefinitionCache.cs" />
+    <Compile Include="ElementProperties\SPGENElementProperties.cs" />
+    <Compile Include="ElementProperties\SPGENEventReceiverProperties.cs" />
+    <Compile Include="ElementProperties\SPGENFieldLinkProperties.cs" />
+    <Compile Include="ElementProperties\SPGENFieldProperties.cs" />
+    <Compile Include="ElementProperties\SPGENListInstanceProperties.cs" />
+    <Compile Include="ElementProperties\SPGENPropertyMappingAttribute.cs" />
+    <Compile Include="ElementProperties\SPGENViewProperties.cs" />
+    <Compile Include="Elements\ContentType\ISPGENContentTypeStorage.cs" />
+    <Compile Include="Elements\ContentType\SPGENContentType.cs" />
+    <Compile Include="Elements\ContentType\SPGENContentTypeBase.cs" />
+    <Compile Include="Elements\ContentType\SPGENContentTypeProvisioningArguments.cs" />
+    <Compile Include="Elements\ContentType\SPGENContentTypeStorage.cs" />
+    <Compile Include="Elements\ContentType\SPGENContentTypeUrlInstance.cs" />
+    <Compile Include="Elements\Feature\SPGENFeature.cs" />
+    <Compile Include="Elements\Feature\SPGENFeatureBase.cs" />
+    <Compile Include="Elements\Field\ISPGENFieldStorage.cs" />
+    <Compile Include="Elements\Field\SPGENChoiceMappingsCache.cs" />
+    <Compile Include="Elements\Field\SPGENField.cs" />
+    <Compile Include="Elements\Field\SPGENFieldBase.cs" />
+    <Compile Include="Elements\Field\SPGENFieldProvisioningEvents.cs" />
+    <Compile Include="Elements\Field\SPGENFieldStorage.cs" />
+    <Compile Include="Elements\Field\SPGENFieldUrlInstance.cs" />
+    <Compile Include="Elements\ListInstance\ISPGENListInstanceStorage.cs" />
+    <Compile Include="Elements\ListInstance\SPGENListInstance.cs" />
+    <Compile Include="Elements\ListInstance\SPGENListInstanceBase.cs" />
+    <Compile Include="Elements\ListInstance\SPGENListInstanceStorage.cs" />
+    <Compile Include="Elements\ListInstance\SPGENListInstanceUrlInstance.cs" />
+    <Compile Include="Elements\ListInstance\SPGENListProvisioningArguments.cs" />
+    <Compile Include="Elements\SPGENElementManager.cs" />
+    <Compile Include="Elements\View\ISPGENViewStorage.cs" />
+    <Compile Include="Elements\View\SPGENView.cs" />
+    <Compile Include="Elements\View\SPGENViewBase.cs" />
+    <Compile Include="Elements\View\SPGENViewStorage.cs" />
+    <Compile Include="Elements\View\SPGENViewUrlInstance.cs" />
+    <Compile Include="Extensions\SPGENContentTypeExtension.cs" />
+    <Compile Include="Extensions\SPGENFarmExtension.cs" />
+    <Compile Include="Extensions\SPGENFolderExtensions.cs" />
+    <Compile Include="Extensions\SPGENListExtension.cs" />
+    <Compile Include="Extensions\SPGENWebApplicationExtension.cs" />
+    <Compile Include="Extensions\SPGENWebExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provisioning\SPGENProvisioner.cs" />
+    <Compile Include="Provisioning\SPGENProvisionerInstance.cs" />
+    <Compile Include="Provisioning\SPGENProvisioningMode.cs" />
+    <Compile Include="SPGENBdcFieldSynchronizer.cs" />
+    <Compile Include="SPGENCommon.cs" />
+    <Compile Include="SPGENExceptions.cs" />
+    <Compile Include="SPGENItemEventPropertiesType.cs" />
+    <Compile Include="SPGENObjectCache.cs" />
+    <Compile Include="SPGENProvisionEventCallBehavior.cs" />
+    <Compile Include="SPGENResourceHelper.cs" />
+    <Compile Include="SPGENTypeValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="keyfile.snk" />
+    <None Include="SPGenesis.Core.nuspec">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,94 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPGenesis.Core", "SPGenesis.Core\SPGenesis.Core.csproj", "{50A04750-86F7-4172-A7AB-58E669FA6121}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPGenesis.Entities", "SPGenesis.Entities\SPGenesis.Entities.csproj", "{203D0084-F08D-4700-B041-F55DAC237659}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup", "Setup", "{C9A65072-03B5-47F6-BE51-09AD6FA10A6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPGenesis.Deploy", "SPGenesis.Deploy\SPGenesis.Deploy.csproj", "{1516FD41-DAFE-4EBB-B17A-B454EE330F87}"
+	ProjectSection(ProjectDependencies) = postProject
+		{50A04750-86F7-4172-A7AB-58E669FA6121} = {50A04750-86F7-4172-A7AB-58E669FA6121}
+		{203D0084-F08D-4700-B041-F55DAC237659} = {203D0084-F08D-4700-B041-F55DAC237659}
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SPGenesisSetup", "SPGenesisSetup\SPGenesisSetup.vdproj", "{3183B98B-D607-4319-B81B-BA91FC7A4145}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs09
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SPGenesis.Core\\SPGenesis.Core.csproj
+		SccProjectName1 = SPGenesis.Core
+		SccLocalPath1 = SPGenesis.Core
+		SccProjectUniqueName2 = SPGenesis.Deploy\\SPGenesis.Deploy.csproj
+		SccProjectTopLevelParentUniqueName2 = SPGenesis.sln
+		SccProjectName2 = SPGenesis.Deploy
+		SccLocalPath2 = SPGenesis.Deploy
+		SccProjectUniqueName3 = SPGenesis.Entities\\SPGenesis.Entities.csproj
+		SccProjectName3 = SPGenesis.Entities
+		SccLocalPath3 = SPGenesis.Entities
+		SccProjectUniqueName4 = SPGenesisSetup\\SPGenesisSetup.vdproj
+		SccProjectTopLevelParentUniqueName4 = SPGenesis.sln
+		SccProjectName4 = SPGenesisSetup
+		SccLocalPath4 = SPGenesisSetup
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50A04750-86F7-4172-A7AB-58E669FA6121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50A04750-86F7-4172-A7AB-58E669FA6121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50A04750-86F7-4172-A7AB-58E669FA6121}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{50A04750-86F7-4172-A7AB-58E669FA6121}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{50A04750-86F7-4172-A7AB-58E669FA6121}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{50A04750-86F7-4172-A7AB-58E669FA6121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50A04750-86F7-4172-A7AB-58E669FA6121}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50A04750-86F7-4172-A7AB-58E669FA6121}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{50A04750-86F7-4172-A7AB-58E669FA6121}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{50A04750-86F7-4172-A7AB-58E669FA6121}.Release|x86.ActiveCfg = Release|Any CPU
+		{203D0084-F08D-4700-B041-F55DAC237659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{203D0084-F08D-4700-B041-F55DAC237659}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{203D0084-F08D-4700-B041-F55DAC237659}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{203D0084-F08D-4700-B041-F55DAC237659}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{203D0084-F08D-4700-B041-F55DAC237659}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{203D0084-F08D-4700-B041-F55DAC237659}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{203D0084-F08D-4700-B041-F55DAC237659}.Release|Any CPU.Build.0 = Release|Any CPU
+		{203D0084-F08D-4700-B041-F55DAC237659}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{203D0084-F08D-4700-B041-F55DAC237659}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{203D0084-F08D-4700-B041-F55DAC237659}.Release|x86.ActiveCfg = Release|Any CPU
+		{1516FD41-DAFE-4EBB-B17A-B454EE330F87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1516FD41-DAFE-4EBB-B17A-B454EE330F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1516FD41-DAFE-4EBB-B17A-B454EE330F87}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1516FD41-DAFE-4EBB-B17A-B454EE330F87}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1516FD41-DAFE-4EBB-B17A-B454EE330F87}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1516FD41-DAFE-4EBB-B17A-B454EE330F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1516FD41-DAFE-4EBB-B17A-B454EE330F87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1516FD41-DAFE-4EBB-B17A-B454EE330F87}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{1516FD41-DAFE-4EBB-B17A-B454EE330F87}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1516FD41-DAFE-4EBB-B17A-B454EE330F87}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{1516FD41-DAFE-4EBB-B17A-B454EE330F87}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
+		{1516FD41-DAFE-4EBB-B17A-B454EE330F87}.Release|x86.ActiveCfg = Release|Any CPU
+		{3183B98B-D607-4319-B81B-BA91FC7A4145}.Debug|Any CPU.ActiveCfg = Debug
+		{3183B98B-D607-4319-B81B-BA91FC7A4145}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{3183B98B-D607-4319-B81B-BA91FC7A4145}.Debug|x86.ActiveCfg = Debug
+		{3183B98B-D607-4319-B81B-BA91FC7A4145}.Release|Any CPU.ActiveCfg = Release
+		{3183B98B-D607-4319-B81B-BA91FC7A4145}.Release|Mixed Platforms.ActiveCfg = Release
+		{3183B98B-D607-4319-B81B-BA91FC7A4145}.Release|x86.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1516FD41-DAFE-4EBB-B17A-B454EE330F87} = {C9A65072-03B5-47F6-BE51-09AD6FA10A6C}
+		{3183B98B-D607-4319-B81B-BA91FC7A4145} = {C9A65072-03B5-47F6-BE51-09AD6FA10A6C}
+	EndGlobalSection
+EndGlobal

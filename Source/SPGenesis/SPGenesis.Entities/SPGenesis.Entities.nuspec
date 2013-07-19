@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>SPGenesis.Entities</id>
+    <version>1.3.5</version>
+    <authors>Tony Restaino</authors>
+    <owners>Tony Restaino</owners>
+    <licenseUrl>http://spgenesis.codeplex.com/license</licenseUrl>
+    <projectUrl>http://spgenesis.codeplex.com</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The SharePoint Genesis Framework for SharePoint 2010 gives you a new way to declare fields, content types, list instances and feature definitions in code. It also gives you a more flexible solution for handling entities than SPMetal and Linq-2-SharePoint.</description>
+    <tags>SharePoint SPGenesis</tags>
+    <dependencies>
+      <dependency id="SPGenesis.Core" version="1.3.5" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Debug\SPGenesis.Entities.dll" target="lib" />
+    <file src="bin\Debug\SPGenesis.Entities.pdb" target="lib" />
+    <file src="bin\Debug\SPGenesis.Entities.xml" target="lib" />
+  </files>
+</package>

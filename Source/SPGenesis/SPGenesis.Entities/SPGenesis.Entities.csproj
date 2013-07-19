@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{203D0084-F08D-4700-B041-F55DAC237659}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SPGenesis.Entities</RootNamespace>
+    <AssemblyName>SPGenesis.Entities</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SPGenesis.Entities.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>keyfile.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapters\SPGENEntityAdapterFieldValueProperties.cs" />
+    <Compile Include="Adapters\SPGENEntityAdapterFile.cs" />
+    <Compile Include="Adapters\SPGENEntityAdapter.cs" />
+    <Compile Include="Adapters\SPGENEntityAdapterAttachments.cs" />
+    <Compile Include="Adapters\SPGENEntityAdapterBcs.cs" />
+    <Compile Include="Adapters\SPGENEntityAdapterConvArgs.cs" />
+    <Compile Include="Adapters\SPGENEntityAdapterDefault.cs" />
+    <Compile Include="Adapters\SPGENEntityAdapterEnum.cs" />
+    <Compile Include="Adapters\SPGENEntityAdapterGeneric.cs" />
+    <Compile Include="Adapters\SPGENEntityAdapterGuid.cs" />
+    <Compile Include="Adapters\SPGENEntityAdapterLookup.cs" />
+    <Compile Include="Adapters\SPGENEntityAdapterPassThrough.cs" />
+    <Compile Include="Adapters\SPGENEntityAdapterUser.cs" />
+    <Compile Include="Entities\SPGENEntityBase.cs" />
+    <Compile Include="Entities\SPGENEntityCollection.cs" />
+    <Compile Include="Entities\SPGENEntityLookupValueObject.cs" />
+    <Compile Include="Entities\SPGENEntityRepositoryState.cs" />
+    <Compile Include="Entities\SPGENEntityUserValueObject.cs" />
+    <Compile Include="Entities\SPGENEntityUpdatableWrapper.cs" />
+    <Compile Include="Entities\SPGENEntityUpdatableWrapperCollection.cs" />
+    <Compile Include="Extensions\SPGENEntityListExtension.cs" />
+    <Compile Include="Extensions\SPGENEntityListItemExtensions.cs" />
+    <Compile Include="Linq\Adapters\SPGENEntityLinqAdapter.cs" />
+    <Compile Include="Linq\Adapters\SPGENEntityLinqAdapterGeneric.cs" />
+    <Compile Include="Linq\Adapters\SPGENEntityLinqAdapterLookup.cs" />
+    <Compile Include="Linq\SPGENEntityEvalLinqExprArgs.cs" />
+    <Compile Include="Linq\SPGENEntityEvalLinqExprResult.cs" />
+    <Compile Include="Linq\SPGENLinqExpressionTreeVisitor.cs" />
+    <Compile Include="Linq\SPGENLinqExpressionVisitorBase.cs" />
+    <Compile Include="Linq\SPGENLinqOperations.cs" />
+    <Compile Include="Linq\SPGENLinqQueryProvider.cs" />
+    <Compile Include="Linq\SPGENLinqQueryableList.cs" />
+    <Compile Include="Managers\SPGENEntityAttachmentsUpdateMethod.cs" />
+    <Compile Include="Managers\SPGENEntityManager.cs" />
+    <Compile Include="Managers\SPGENEntityManagerBase.cs" />
+    <Compile Include="Managers\SPGENEntityManagerFoundationBase.cs" />
+    <Compile Include="Managers\SPGENEntityManagerFoundationBase_Files.cs" />
+    <Compile Include="Managers\SPGENEntityOperationContext.cs" />
+    <Compile Include="Managers\SPGENEntityOperationContextFactory.cs" />
+    <Compile Include="Managers\SPGENEntityOperationParameters.cs" />
+    <Compile Include="Managers\SPGENEntityPagedCollectionInfo.cs" />
+    <Compile Include="Managers\SPGENEntityUpdateMethod.cs" />
+    <Compile Include="Mapping\SPGENEntityMap.cs" />
+    <Compile Include="Mapping\SPGENEntityMapBase.cs" />
+    <Compile Include="Mapping\SPGENEntityMapInitializationState.cs" />
+    <Compile Include="Mapping\SPGENEntityMapResolver.cs" />
+    <Compile Include="Mapping\SPGENEntityMap_MappingMethods.cs" />
+    <Compile Include="Mapping\SPGENEntityPropertyAccessor.cs" />
+    <Compile Include="Mapping\SPGENEntityPropertyAccessorArguments.cs" />
+    <Compile Include="Mapping\SPGENEntityValueObjectMap.cs" />
+    <Compile Include="Mapping\SPGENEntityItemIdentifierInfo.cs" />
+    <Compile Include="Mapping\SPGENEntityValueObjectMapBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\ISPGENRepositoryManager.cs" />
+    <Compile Include="Repository\SPGENEntityFileOperationArguments.cs" />
+    <Compile Include="Repository\SPGENRepositoryDataItem.cs" />
+    <Compile Include="Repository\SPGENRepositoryDataItemCollection.cs" />
+    <Compile Include="Repository\SPGENRepositoryDataItemFile.cs" />
+    <Compile Include="Repository\SPGENRepositoryManager.cs" />
+    <Compile Include="SPGENEntityExceptions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SPGenesis.Core\SPGenesis.Core.csproj">
+      <Project>{50A04750-86F7-4172-A7AB-58E669FA6121}</Project>
+      <Name>SPGenesis.Core</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="keyfile.snk" />
+    <None Include="SPGenesis.Entities.nuspec">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
